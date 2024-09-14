@@ -2,7 +2,6 @@
 
 namespace Azzarip\Client;
 
-use Azzarip\Client\Commands\ClientCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
