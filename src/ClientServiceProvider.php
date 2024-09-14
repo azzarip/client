@@ -22,11 +22,11 @@ class ClientServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('azzarip')
-            ->hasConfigFile( 'domains')
-            ->hasConfigFile( 'client')
+            ->hasConfigFile('domains')
+            ->hasConfigFile('client')
             ->hasRoutes('routes')
             ->hasViews()
-            ->hasCommands( $this->getCommands());
+            ->hasCommands($this->getCommands());
     }
 
     public function registeringPackage(): void
