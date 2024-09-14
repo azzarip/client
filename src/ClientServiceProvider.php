@@ -20,7 +20,6 @@ class ClientServiceProvider extends PackageServiceProvider
             ->hasConfigFile(configFileName: 'domains')
             ->hasConfigFile(configFileName: 'client')
             ->hasViews()
-            ->hasRoutes('routes')
-            ->hasCommand(ClientCommand::class);
+            ->hasRoutes('routes');
     }
 }
