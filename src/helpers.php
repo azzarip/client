@@ -1,6 +1,6 @@
 <?php
 
-use Azzarip\Utilities\DUrl;
+use Azzarip\Client\DUrl;
 
 if (! function_exists('durl')) {
     function durl($string, $domainKey, $data = [])
