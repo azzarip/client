@@ -16,7 +16,7 @@ class PolicyController extends Controller
 
         $content = File::get(__DIR__."/../../../content/policies/{$policy}/{$locale}.html");
 
-        return view('client::policy', [
+        return view('azzarip::policy', [
             'content' => $content,
         ]);
     }

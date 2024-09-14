@@ -19,8 +19,8 @@ class ClientServiceProvider extends PackageServiceProvider
             ->name('azzarip')
             ->hasConfigFile(configFileName: 'domains')
             ->hasConfigFile(configFileName: 'client')
-            ->hasViews()
-            ->hasRoutes('routes');
+            ->hasRoutes('routes')
+            ->hasViews();
     }
 
     public function registeringPackage(): void
