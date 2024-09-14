@@ -16,10 +16,11 @@ class ClientServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('client')
-            ->hasConfigFile()
+            ->name('azzarip')
+            ->hasConfigFile(configFileName: 'domains')
+            ->hasConfigFile(configFileName: 'client')
             ->hasViews()
-            ->hasMigration('create_client_table')
+            ->hasRoutes('routes')
             ->hasCommand(ClientCommand::class);
     }
 }

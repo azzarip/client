@@ -17,8 +17,10 @@
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0"
+        "illuminate/contracts": "^10.0||^11.0",
+        "internachi/modular": "^2.2",
+        "label84/laravel-tagmanager": "^1.4",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -30,8 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Azzarip\\Client\\": "src/",
-            "Azzarip\\Client\\Database\\Factories\\": "database/factories/"
+            "Azzarip\\Client\\": "src/"
         }
     },
     "autoload-dev": {
@@ -69,10 +70,7 @@
         "laravel": {
             "providers": [
                 "Azzarip\\Client\\ClientServiceProvider"
-            ],
-            "aliases": {
-                "Client": "Azzarip\\Client\\Facades\\Client"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
