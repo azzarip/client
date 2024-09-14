@@ -21,8 +21,8 @@ Route::middleware(DomainKey::class)->group(function () {
         $key = request()->get('domainKey');
 
         $favicon_path = storage_path("app/favicons/$key.ico");
-        if(! File::exists($favicon_path)) {
-            $favicon_path = storage_path("app/favicons/base.ico");
+        if (! File::exists($favicon_path)) {
+            $favicon_path = storage_path('app/favicons/base.ico');
         }
 
         $ico = File::get($favicon_path);
