@@ -1,12 +1,12 @@
 <?php
 
-namespace Azzarip\Utilities\Http\Middleware;
+namespace Azzarip\Client\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class English
+class AuthorizeApi
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,11 @@ class English
      */
     public function handle(Request $request, Closure $next): Response
     {
-        app()->setLocale('en');
+        $username = $request->getUser();
+        $password = $request->getPassword();
+        if ($username != config('client.response.username') || $password != config('client.response.password')) {
+            return response()->json(['error' => 'Authentication Error.'], 401);
+        }
 
         return $next($request);
     }

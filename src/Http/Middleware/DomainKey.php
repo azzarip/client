@@ -1,6 +1,6 @@
 <?php
 
-namespace Azzarip\Utilities\Http\Middleware;
+namespace Azzarip\Client\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

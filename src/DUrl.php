@@ -1,8 +1,8 @@
 <?php
 
-namespace Azzarip\Utilities;
+namespace Azzarip\Client;
 
-use Azzarip\Utilities\CookieConsent\CookieConsent;
+use Azzarip\Client\CookieConsent\CookieConsent;
 use Illuminate\Support\Arr;
 
 class DUrl
