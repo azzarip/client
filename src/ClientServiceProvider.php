@@ -3,10 +3,10 @@
 namespace Azzarip\Client;
 
 use Azzarip\Client\Theme\Theme;
+use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
-use Illuminate\Cookie\Middleware\EncryptCookies;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ClientServiceProvider extends PackageServiceProvider
@@ -39,6 +39,7 @@ class ClientServiceProvider extends PackageServiceProvider
         Blade::component('theme', alias: Theme::class);
 
     }
+
     protected function getCommands(): array
     {
         return [
