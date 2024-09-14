@@ -2,11 +2,13 @@
 
 namespace Azzarip\Client;
 
+use Livewire\Livewire;
 use Azzarip\Client\Theme\Theme;
-use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
+use Azzarip\Client\CookieConsent\ConsentManager;
+use Illuminate\Cookie\Middleware\EncryptCookies;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ClientServiceProvider extends PackageServiceProvider
@@ -37,7 +39,7 @@ class ClientServiceProvider extends PackageServiceProvider
     {
         EncryptCookies::except('cookie_consent');
         Blade::component('theme', alias: Theme::class);
-
+        Livewire::component('cookie-consent', ConsentManager::class);
     }
 
     protected function getCommands(): array
