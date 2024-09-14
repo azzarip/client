@@ -6,6 +6,6 @@ use function Pest\Laravel\get;
 //     get(route('privacy-policy'))->assertOk();
 // });
 
-it( 'has cookie policy', function () {
+it('has cookie policy', function () {
     get(route('cookie-policy'))->assertOk();
 });
