@@ -1,12 +1,11 @@
 <?php
 
+use Azzarip\Client\Http\Controllers\PolicyController;
+use Azzarip\Utilities\Http\Middleware\DomainKey;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
-use Azzarip\Utilities\Http\Middleware\DomainKey;
-use Azzarip\Client\Http\Controllers\PolicyController;
-use Azzarip\Utilities\Http\Controllers\DeployController;
 
-Route::get('/privacy-policy',PolicyController::class )->name('privacy-policy');
+Route::get('/privacy-policy', PolicyController::class)->name('privacy-policy');
 Route::get('/cookie-policy', PolicyController::class)->name('cookie-policy');
 
 // Route::middleware(DomainKey::class)->group(function () {

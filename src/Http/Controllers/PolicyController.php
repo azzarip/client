@@ -2,7 +2,6 @@
 
 namespace Azzarip\Client\Http\Controllers;
 
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\File;
@@ -13,12 +12,12 @@ class PolicyController extends Controller
     {
         $locale = app()->getLocale();
 
-        $policy = str_replace('-policy', '', $request->path(), );
+        $policy = str_replace('-policy', '', $request->path());
 
-        $content = File::get(__DIR__ . "/../../../content/policies/{$policy}/{$locale}.html");
+        $content = File::get(__DIR__."/../../../content/policies/{$policy}/{$locale}.html");
 
         return view('client::policy', [
-            'content' => $content
+            'content' => $content,
         ]);
     }
 }

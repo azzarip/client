@@ -2,9 +2,9 @@
 
 namespace Azzarip\Client\Tests;
 
+use Azzarip\Client\ClientServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Azzarip\Client\ClientServiceProvider;
 
 class TestCase extends Orchestra
 {
