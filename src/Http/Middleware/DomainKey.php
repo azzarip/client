@@ -37,6 +37,6 @@ class DomainKey
 
     protected function isBaseDomain($domain)
     {
-        return $domain == env('DOMAIN_BASE') || strpos($domain, '.' . env('DOMAIN_BASE'));
+        return $domain == env('DOMAIN_BASE') || strpos($domain, '.'.env('DOMAIN_BASE'));
     }
 }

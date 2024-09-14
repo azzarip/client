@@ -1,7 +1,6 @@
 <?php
 
 use Azzarip\Utilities\DUrl;
-use Illuminate\Support\Arr;
 
 if (! function_exists('durl')) {
     function durl($string, $domainKey, $data = [])

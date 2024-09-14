@@ -2,11 +2,11 @@
 
 namespace Azzarip\Utilities;
 
-use Illuminate\Support\Arr;
 use Azzarip\Utilities\CookieConsent\CookieConsent;
+use Illuminate\Support\Arr;
 
-class DUrl {
-
+class DUrl
+{
     public function __construct(public string $uri, public string $domainKey, public array $data = [])
     {
         if (empty(config('domains.'.$this->domainKey))) {
@@ -14,7 +14,8 @@ class DUrl {
         }
     }
 
-    public function url() {
+    public function url()
+    {
 
         $url = config("domains.{$this->domainKey}.url");
 
@@ -36,11 +37,13 @@ class DUrl {
 
     }
 
-    public function withCookieConsent() {
+    public function withCookieConsent()
+    {
         $cookieConsent = CookieConsent::get();
         if ($cookieConsent) {
             $this->data['cc'] = $cookieConsent->toUrl();
         }
+
         return $this;
     }
 
