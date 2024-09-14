@@ -18,12 +18,10 @@
     }
 </style>
 
-<div class="px-2 mt-10 text-lg text-y text">
+<div class="px-2 mt-10 text-lg text-y text mb-12">
     {!! $content !!}
 </div>
-<div class="h-12"></div>
 </div>
 </main>
-<div class="w-[calc(50%-384px)] max-lg:hidden"></div>
 </div>
 @endsection
