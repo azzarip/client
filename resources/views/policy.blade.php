@@ -2,10 +2,8 @@
 
 @section('body')
 <div class="flex flex-row flex-1">
-    <div class="w-[calc(50%-384px)] max-lg:hidden"></div>
-    <main class="container flex-1 table text-xl">
+<main class="container flex-1 table max-w-xl mx-auto text-xl">
 
-<?php use Illuminate\Support\Facades\Request; ?>
 <style>
     .text a {
         color:#3030F1;
@@ -18,13 +16,9 @@
     .text ul > * + * {
         margin-top: 12px;
     }
-
-    h1 {
-        @apply h1;
-    }
 </style>
 
-<div class="text-lg text-y text mt-10">
+<div class="px-2 mt-10 text-lg text-y text">
     {!! $content !!}
 </div>
 <div class="h-12"></div>
