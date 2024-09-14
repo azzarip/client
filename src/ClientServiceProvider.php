@@ -2,7 +2,7 @@
 
 namespace Azzarip\Client;
 
-use Azzarip\Client\Commands\ClientCommand;
+use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -21,5 +21,11 @@ class ClientServiceProvider extends PackageServiceProvider
             ->hasConfigFile(configFileName: 'client')
             ->hasViews()
             ->hasRoutes('routes');
+    }
+
+    public function registeringPackage(): void
+    {
+        Config::set('app-modules.modules_namespace', 'Domains');
+        Config::set('app-modules.modules_directory', 'domains');
     }
 }
