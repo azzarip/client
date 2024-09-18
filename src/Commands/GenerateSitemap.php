@@ -40,7 +40,7 @@ class GenerateSitemap extends Command
             $sitemap = Sitemap::create();
             $entries = include $file;
             foreach ($entries as $entry) {
-                $entry->setUrl(durl($entry->url, $key));
+                $entry->setUrl(durl($entry->url, $key)->url());
                 $sitemap->add($entry);
             }
             $sitemap->writeToFile(storage_path("framework/sitemaps/$key.xml"));
