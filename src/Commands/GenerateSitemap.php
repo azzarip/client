@@ -2,8 +2,9 @@
 
 namespace Azzarip\Client\Commands;
 
-use Illuminate\Console\Command;
 use Spatie\Sitemap\Sitemap;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\File;
 
 class GenerateSitemap extends Command
 {
@@ -30,6 +31,11 @@ class GenerateSitemap extends Command
     {
         foreach (config('domains') as $key => $domain) {
 
+            $directory = storage_path("framework/sitemaps");
+            if (!File::exists($directory)) {
+                File::makeDirectory($directory, 0755, true);
+            }
+
             $file = base_path("domains/$key/sitemap.php");
             if (! file_exists($file)) {
                 continue;
@@ -43,7 +49,7 @@ class GenerateSitemap extends Command
                 $entry->setUrl(durl($entry->url, $key)->url());
                 $sitemap->add($entry);
             }
-            $sitemap->writeToFile(storage_path("framework/sitemaps/$key.xml"));
+            $sitemap->writeToFile($directory ."/$key.xml");
         }
 
         return self::SUCCESS;
