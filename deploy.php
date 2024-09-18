@@ -1,4 +1,5 @@
 <?php
+
 namespace Deployer;
 
 require './vendor/azzarip/utilities/deploy.php';
