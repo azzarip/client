@@ -12,7 +12,7 @@ Route::middleware(DomainKey::class)->group(function () {
 
     Route::get('/sitemap.xml', function () {
         $key = request()->get('domainKey');
-        $xml = File::get(storage_path("app/sitemaps/$key.xml"));
+        $xml = File::get(storage_path("framework/sitemaps/$key.xml"));
 
         return response($xml, 200)->header('Content-Type', 'application/xml');
     });

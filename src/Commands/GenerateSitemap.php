@@ -43,7 +43,7 @@ class GenerateSitemap extends Command
                 $entry->setUrl(durl($entry->url, $key));
                 $sitemap->add($entry);
             }
-            $sitemap->writeToFile(storage_path("app/sitemaps/$key.xml"));
+            $sitemap->writeToFile(storage_path("framework/sitemaps/$key.xml"));
         }
 
         return self::SUCCESS;
