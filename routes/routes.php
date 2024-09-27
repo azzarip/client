@@ -27,6 +27,6 @@ Route::middleware(DomainKey::class)->group(function () {
 
         $ico = File::get($favicon_path);
 
-        return response($ico, 200)->header('Content-Type', 'image/vnd.microsoft.icon');
+        return response($ico, 200)->header('Content-Type', 'image/x-icon');
     });
 });
