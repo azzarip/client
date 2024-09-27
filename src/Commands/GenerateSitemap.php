@@ -2,9 +2,9 @@
 
 namespace Azzarip\Client\Commands;
 
-use Spatie\Sitemap\Sitemap;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
+use Spatie\Sitemap\Sitemap;
 
 class GenerateSitemap extends Command
 {
@@ -49,7 +49,7 @@ class GenerateSitemap extends Command
                 $entry->setUrl(durl($entry->url, $key)->url());
                 $sitemap->add($entry);
             }
-            $sitemap->writeToFile($directory ."/$key.xml");
+            $sitemap->writeToFile($directory."/$key.xml");
         }
 
         return self::SUCCESS;
