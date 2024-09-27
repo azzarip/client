@@ -31,8 +31,8 @@ class GenerateSitemap extends Command
     {
         foreach (config('domains') as $key => $domain) {
 
-            $directory = storage_path("app/sitemaps");
-            if (!File::exists($directory)) {
+            $directory = storage_path('app/sitemaps');
+            if (! File::exists($directory)) {
                 File::makeDirectory($directory, 0755, true);
             }
 
