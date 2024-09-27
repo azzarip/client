@@ -12,7 +12,7 @@ Route::middleware(DomainKey::class)->group(function () {
 
     Route::get('/sitemap.xml', function () {
         $key = request()->get('domainKey');
-        $xml = File::get(storage_path("framework/sitemaps/$key.xml"));
+        $xml = File::get(storage_path("app/sitemaps/$key.xml"));
 
         return response($xml, 200)->header('Content-Type', 'application/xml');
     });
@@ -20,9 +20,9 @@ Route::middleware(DomainKey::class)->group(function () {
     Route::get('/favicon.ico', function () {
         $key = request()->get('domainKey');
 
-        $favicon_path = storage_path("app/favicons/$key.ico");
+        $favicon_path = resource_path("favicons/$key.ico");
         if (! File::exists($favicon_path)) {
-            $favicon_path = storage_path('app/favicons/base.ico');
+            $favicon_path = resource_path('favicons/base.ico');
         }
 
         $ico = File::get($favicon_path);
