@@ -19,14 +19,14 @@ class DUrl
 
         $url = config("domains.{$this->domainKey}.url");
 
-        $path = ltrim($this->uri, '/');
+        $uri = ltrim($this->uri, '/');
 
-        if (! empty($path)) {
-            $url .= '/'.$path;
+        if (! empty($uri)) {
+            $url .= '/'.$uri;
         }
 
-        if (! empty($data)) {
-            $url .= '?'.Arr::query($data);
+        if (! empty($this->data)) {
+            $url .= '?'.Arr::query($this->data);
         }
 
         if (request()->isSecure()) {
