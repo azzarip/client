@@ -22,7 +22,7 @@ class DomainKey
 
                 $request->attributes->add(['domainKey' => $key]);
                 config()->set('seo.site_name', $value['name']);
-                config()->set('app.url', durl('/', $key, [], false));
+                config()->set('app.url', durl('/', $key, []));
 
                 if (! $this->isBaseDomain($domain)) {
                     config()->set('session.domain', '');
