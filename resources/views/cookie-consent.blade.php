@@ -1,42 +1,32 @@
-<aside id="cookies-policy" x-data="{ 'expand': false }" x-show="$wire.show"
-    data-text="{{ json_encode(__('client::cookies.details')) }}">
-    <div class="fixed inset-0 flex items-center justify-center pointer-events-none z-20 bg-black/10">
+<aside id="cookies-policy" x-data="{ 'expand': false }" x-show="$wire.show">
+    <div class="fixed inset-0 z-20 flex items-center justify-center pointer-events-none bg-black/10">
         <div class="fixed bottom-0 w-full max-w-4xl px-4 pt-4 bg-white pointer-events-auto rounded-t-md">
             <div class="max-w-4xl mx-auto">
-                <h2 class="mb-1 font-semibold text-center font-xl">@lang('client::cookies.title')</h2>
-                <div class="max-lg:text-xs space-y-1 xl:text-sm">
-                    <p>Wir und ausgewählte Dritte verwenden Cookies oder ähnliche Technologien für technische Zwecke
-                        und mit Ihrer Zustimmung auch für Erfahrungs-, Mess- und Marketingzwecke (mit
-                        personalisierter Werbung), wie in der <a href="{{ route('cookie-policy') }}">Cookie-Policy</a>
-                        angegeben.</p>
-                    <p>In Bezug auf Werbung können wir und ausgewählte Dritte präzise Standortdaten und
-                        Gerätekennungen verwenden, um Informationen auf einem Gerät zu speichern und/oder darauf
-                        zuzugreifen und personenbezogene Daten wie Ihre Nutzungsdaten zu verarbeiten. Weitere Informationen finden Sie in unserer
+                <h2 class="mb-1 text-xl font-semibold text-center">@lang('azzarip::cookies.title')</h2>
+                <div class="space-y-2 max-lg:text-xs xl:text-sm">
+                    <p>@lang('azzarip::cookies.text.1') <a href="{{ route('cookie-policy') }}">Cookie-Policy</a>
+                        @lang('azzarip::cookies.text.2').</p>
+                    <p>@lang('azzarip::cookies.text.3')
                         <a href="{{ route('cookie-policy') }}" class="inline-link">Cookie Policy</a>.</p>
-                    <p class="max-lg:hidden">Sie können Ihre Zustimmung frei geben, ablehnen oder widerrufen,
-                        jederzeit, indem Sie auf das Präferenzpanel zugreifen. Wenn Sie Ihre Zustimmung geben, gilt
-                        sie nur für diese Domain. Die Verweigerung der Zustimmung kann die entsprechenden Funktionen
-                        möglicherweise unzugänglich machen.</p>
-                    <p class="max-lg:hidden">Verwenden Sie die Schaltfläche "Alles akzeptieren", um zuzustimmen.
-                        Verwenden Sie die Schaltfläche "Nur notwendige", um ohne Zustimmung fortzufahren.</p>
+                    <p class="max-lg:hidden">@lang('azzarip::cookies.text.4').</p>
                 </div>
                 <div class="flex flex-col max-w-5xl gap-5 my-4 lg:flex-row">
                     <form wire:submit="acceptEssentials" class="w-full">
                         <button type="submit" class="w-full p-2 text-black bg-white border border-black rounded-md">
-                            @lang('client::cookies.accept_essentials')
+                            @lang('azzarip::cookies.accept_essentials')
                         </button>
                     </form>
                     <form wire:submit="acceptAll" class="w-full">
                         <button type="submit"
                             class="w-full p-2 text-white bg-green-700 border border-green-700 rounded-md">
-                            @lang('client::cookies.accept_all')
+                            @lang('azzarip::cookies.accept_all')
                         </button>
                     </form>
                 </div>
             </div>
             <div class="flex flex-row justify-center w-full gap-4 py-2 align-bottom border-t cursor-pointer"
                 @click="expand = ! expand">
-                <span class="font-semibold text-center">@lang('client::cookies.customize')</span>
+                <span class="font-semibold text-center">@lang('azzarip::cookies.customize')</span>
                 <x-heroicon-s-chevron-up class="w-6 svg" x-cloak x-show="expand" />
                 <x-heroicon-s-chevron-down class="w-6 svg" x-show="!expand" />
             </div>
@@ -45,7 +35,7 @@
                 <form wire:submit="acceptSelected" class="w-11/12 px-2 mx-auto mb-5 space-y-4 lg:px-5">
                     <label for="essentials" class="relative block">
                         <div class="flex flex-row justify-between mx-auto">
-                            <span class="font-semibold lg:pl-5">@lang('client::cookies.essentials_title')</span>
+                            <span class="font-semibold lg:pl-5">@lang('azzarip::cookies.essentials_title')</span>
                             <div class="flex items-center justify-center">
                                 <div class="block switch">
                                     <input type="checkbox" class="" checked disabled>
@@ -53,24 +43,24 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-2">@lang('client::cookies.essentials_desc')</p>
+                        <p class="mt-2">@lang('azzarip::cookies.essentials_desc')</p>
                     </label>
 
                     @foreach ($cookieCategories as $category)
 
                             <div class="flex flex-row justify-between mx-auto">
-                                <span class="font-semibold lg:pl-5">@lang('client::cookies.' . $category . '_title')</span>
+                                <span class="font-semibold lg:pl-5">@lang('azzarip::cookies.' . $category . '_title')</span>
                                 <label class="switch">
                                     <input type="checkbox" wire:model='selected' value="{{ $category }}">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
-                            <p class="mt-2">@lang('client::cookies.' . $category . '_desc')</p>
+                            <p class="mt-2">@lang('azzarip::cookies.' . $category . '_desc')</p>
 
                     @endforeach
                     <button type="submit"
                         class="block w-full p-2 mx-auto text-white bg-green-700 border border-green-700 rounded-md">
-                        @lang('client::cookies.accept_partial')
+                        @lang('azzarip::cookies.accept_partial')
                     </button>
                 </form>
             </div>

@@ -14,4 +14,16 @@ return [
     'marketing_title' => 'Werbung Cookies',
     'marketing_desc' => 'Diese Cookies werden verwendet, um Informationen über Ihre Anzeigeaktivitäten zu speichern, um relevantere Anzeigen bereitzustellen.',
     'customize' => 'Anpassen',
+    'text' => [
+        1 => 'Wir und ausgewählte Dritte verwenden Cookies oder ähnliche Technologien für technische Zwecke
+        und mit Ihrer Zustimmung auch für Erfahrungs-, Mess- und Marketingzwecke (mit
+        personalisierter Werbung), wie in der',
+        2 => 'angegeben',
+        3 => 'In Bezug auf Werbung können wir und ausgewählte Dritte präzise Standortdaten und
+        Gerätekennungen verwenden, um Informationen auf einem Gerät zu speichern und/oder darauf
+        zuzugreifen und personenbezogene Daten wie Ihre Nutzungsdaten zu verarbeiten. Weitere Informationen finden Sie in unserer',
+        4 => 'Sie können Ihre Zustimmung frei geben, ablehnen oder widerrufen,
+        jederzeit, indem Sie auf das Präferenzpanel zugreifen. Die Verweigerung der Zustimmung kann die entsprechenden Funktionen
+        möglicherweise unzugänglich machen'
+    ],
 ];
