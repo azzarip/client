@@ -26,6 +26,7 @@ class ClientServiceProvider extends PackageServiceProvider
             ->hasConfigFile('client')
             ->hasRoutes('routes')
             ->hasViews()
+            ->hasTranslations()
             ->hasCommands($this->getCommands());
     }
 

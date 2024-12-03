@@ -37,7 +37,7 @@
     </x-theme>
     </div>
 
-    @if(config('utilities.cookie-consent'))
+    @if(config('client.cookie-consent'))
         @livewire('cookie-consent')
     @endif
     @stack('scripts')
