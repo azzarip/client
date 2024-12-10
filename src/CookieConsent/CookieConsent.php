@@ -26,7 +26,7 @@ class CookieConsent
             'consent' => $this->cookieValue,
             'version' => self::VERSION,
         ];
-        Cookie::queue('cookie_consent', json_encode($cookie), 365 * 24 * 60, null, null, false, false);
+        Cookie::queue('cookie_consent', json_encode($cookie), 365 * 24 * 60, null, config('session.domain'), false, false);
 
         return $this;
     }
