@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
     'title' => 'Cookies und Privacy: Your choice',
@@ -24,6 +24,6 @@ return [
         and process personal data such as your usage data. For more information, please see our',
         4 => 'You can freely give, decline or withdraw your consent,
         at any time by accessing the preference panel. Refusing consent may make the relevant functions inaccessible.
-        '
+        ',
     ],
 ];
