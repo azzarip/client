@@ -25,7 +25,7 @@ class DomainKey
                 config()->set('app.url', durl('/', $key, []));
 
                 if (! $this->isBaseDomain($domain)) {
-                    config()->set('session.domain', '');
+                    config()->set('session.domain', $domain);
                 }
 
                 return $next($request);
