@@ -42,6 +42,7 @@ class DUrl
     {
         $this->withCookieConsent();
         $this->withUtmToken();
+
         return $this;
     }
 
