@@ -2,8 +2,9 @@
 
 namespace Azzarip\Client;
 
-use Azzarip\Client\CookieConsent\CookieConsent;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Session;
+use Azzarip\Client\CookieConsent\CookieConsent;
 
 class DUrl
 {
@@ -36,6 +37,12 @@ class DUrl
         return 'http://'.$url;
 
     }
+    public function withAll()
+    {
+        $this->withCookieConsent();
+
+        return $this;
+    }
 
     public function withCookieConsent()
     {
@@ -47,6 +54,16 @@ class DUrl
         return $this;
     }
 
+    public function withUtmToken() 
+    {   
+        $token = Session::get('utm');
+        if ($token) {
+            $this->data['utt'] = $token;
+        }
+
+        return $this;
+    }
+    
     public function __toString(): string
     {
         return $this->url();
