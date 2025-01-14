@@ -40,7 +40,7 @@ class DUrl
     public function withAll()
     {
         $this->withCookieConsent();
-
+        $this->withUtmToken();
         return $this;
     }
 
