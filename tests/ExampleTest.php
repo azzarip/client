@@ -7,5 +7,5 @@ use function Pest\Laravel\get;
 // });
 
 it('has cookie policy', function () {
-    get(route('cookie-policy'))->assertOk();
-});
+get(route('cookie-policy'))->assertOk();
+    });
