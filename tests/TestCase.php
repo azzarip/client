@@ -22,7 +22,7 @@ class TestCase extends Orchestra
     {
         return [
             ClientServiceProvider::class,
-            LivewireServiceProvider::class
+            LivewireServiceProvider::class,
         ];
     }
 
