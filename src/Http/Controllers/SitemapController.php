@@ -13,7 +13,7 @@ class SitemapController extends Controller
         $key = request()->get('domainKey');
         $path = storage_path("app/sitemaps/$key.xml");
 
-        if (!File::exists($path)) {
+        if (! File::exists($path)) {
             abort(404, 'Sitemap not found.');
         }
 
