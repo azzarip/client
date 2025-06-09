@@ -1,21 +1,21 @@
-@props(['nav' => true, 'centerMenu' => false, 'centerHeader' => false])
+@props(['nav' => true, 'center' => null])
 
 <div>
 @if($nav)
 <header>
 <div class="flex items-stretch justify-between content-baseline {{ $headerClass ?? null }}">
-    @if($centerHeader)
-    <div class="w-1/4 max-xl:hidden"></div>
+    @if($center == 'header')
+    <div class="w-1/3 max-xl:hidden"></div>
     @endif
-    <div class="xl:w-1/4">
+    <div class="{{ $center == 'header'  ? 'w-1/3 justify-center' : 'w-1/4 justify-end' }}">
         @yield('header')
     </div>
-    <div class="flex {{ $centerMenu  ? 'w-1/2 justify-center' : 'w-3/4 justify-end' }} mt-3 max-xl:hidden">
+    <div class="flex {{ $center == 'menu'  ? 'w-1/2 justify-center' : ($center == 'header' ? 'w-1/3 justify-end' : 'w-1/2 justify-center') }} mt-3 max-xl:hidden">
         <nav>
             @yield('big-menu')
         </nav>
     </div>
-    @if($centerMenu)
+    @if($center == 'menu')
     <div class="w-1/4 max-xl:hidden"></div>
     @endif
 
