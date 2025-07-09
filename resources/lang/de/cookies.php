@@ -24,6 +24,6 @@ return [
         zuzugreifen und personenbezogene Daten wie Ihre Nutzungsdaten zu verarbeiten. Weitere Informationen finden Sie in unserer',
         4 => 'Sie können Ihre Zustimmung frei geben, ablehnen oder widerrufen,
         jederzeit, indem Sie auf das Präferenzpanel zugreifen. Die Verweigerung der Zustimmung kann die entsprechenden Funktionen
-        möglicherweise unzugänglich machen',
+        möglicherweise unzugänglich machen.',
     ],
 ];

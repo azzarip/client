@@ -8,7 +8,7 @@
                         @lang('azzarip::cookies.text.2').</p>
                     <p>@lang('azzarip::cookies.text.3')
                         <a href="{{ route('cookie-policy') }}" class="inline-link">Cookie Policy</a>.</p>
-                    <p class="max-lg:hidden">@lang('azzarip::cookies.text.4').</p>
+                    <p class="max-lg:hidden">@lang('azzarip::cookies.text.4')</p>
                 </div>
                 <div class="flex flex-col max-w-5xl gap-5 my-4 lg:flex-row">
                     <form wire:submit="acceptEssentials" class="w-full">
