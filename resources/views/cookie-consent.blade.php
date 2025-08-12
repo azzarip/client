@@ -4,8 +4,7 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="mb-1 text-xl font-semibold text-center">@lang('azzarip::cookies.title')</h2>
                 <div class="space-y-2 max-lg:text-xs xl:text-sm">
-                    <p>@lang('azzarip::cookies.text.1') <a href="{{ route('cookie-policy') }}">Cookie-Policy</a>
-                        @lang('azzarip::cookies.text.2').</p>
+                    <p>@lang('azzarip::cookies.text.1') <a href="{{ route('cookie-policy') }}">Cookie-Policy</a>.</p>
                     <p>@lang('azzarip::cookies.text.3')
                         <a href="{{ route('cookie-policy') }}" class="inline-link">Cookie Policy</a>.</p>
                     <p class="max-lg:hidden">@lang('azzarip::cookies.text.4')</p>
