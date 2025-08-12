@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Cookies und Privacy: Your choice',
+    'title' => 'Cookies and Privacy: Your choice',
     'accept_essentials' => 'Only Essentials',
     'accept_all' => 'Accept',
     'accept_partial' => 'Save ',
@@ -11,7 +11,7 @@ return [
     'analytics_desc' => 'We use these cookies for internal research purposes to find out how we can improve the service for all our users. These cookies evaluate how you interact with our website.',
     'optional_title' => 'Experience Cookies',
     'optional_desc' => 'These cookies enable features that may improve your user experience, but their absence will not affect your ability to browse our website.',
-    'marketing_title' => 'Advertisemnt Cookies',
+    'marketing_title' => 'Advertisement Cookies',
     'marketing_desc' => 'These cookies are used to store information about your viewing activity in order to provide more relevant ads.',
     'customize' => 'Customize',
     'text' => [
