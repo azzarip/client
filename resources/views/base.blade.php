@@ -20,11 +20,6 @@
     @stack('head')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
-    @googlefonts
-
-    @foreach(site('fonts') as $font)
-    @if($font) @googlefonts($font) @endif
-    @endforeach
 
 </head>
 
@@ -40,10 +35,11 @@
     @if(config('client.cookie-consent'))
         @livewire('cookie-consent')
     @endif
+
+    @auth
+    <x-modals::logout />
+    @endauth
     @stack('scripts')
     @livewireScripts
-    @auth
-        <x-modals::logout />
-    @endauth
 </body>
 </html>
