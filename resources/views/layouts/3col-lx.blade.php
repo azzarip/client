@@ -1,4 +1,4 @@
-@extends('azzarip::base')
+@extends('azzarip::layouts.base')
 
 @section('body')
 <div class="flex flex-row flex-1">
