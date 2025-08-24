@@ -38,7 +38,7 @@ class ClientServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            \Azzarip\Client\Commands\GenerateSitemap::class,
+            //
         ];
     }
 }
